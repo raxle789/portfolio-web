@@ -20,11 +20,9 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "../../public/assets/logo.png";
@@ -45,6 +43,8 @@ import { SiMongodb } from "react-icons/si";
 import { SiExpress } from "react-icons/si";
 import { SiPhp } from "react-icons/si";
 import { FaLink } from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
+import { BsTelephoneFill } from "react-icons/bs";
 import { projectData, TProject } from "@/lib/project-data";
 
 export default function Home() {
@@ -61,14 +61,13 @@ export default function Home() {
                 <NavigationMenuContent>
                   <ul className="grid w-[300px] gap-3 p-4">
                     <ListItem href="#about" title="About">
-                      Re-usable components built using Radix UI and Tailwind
-                      CSS.
+                      Interesting stories about myself.
                     </ListItem>
                     <ListItem href="#projects" title="Projects">
-                      How to install dependencies and structure your app.
+                      Cool projects I've completed.
                     </ListItem>
                     <ListItem href="#experience" title="Experience">
-                      Styles for headings, paragraphs, lists...etc
+                      The experience I've had so far.
                     </ListItem>
                   </ul>
                 </NavigationMenuContent>
@@ -101,9 +100,16 @@ export default function Home() {
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
-          <Button className="ml-2 hidden md:block bg-indigo-700 text-white hover:bg-indigo-500 active:bg-indigo-600">
-            My Resume
-          </Button>
+          <div className="hover:cursor-pointer ml-2 px-3 py-[10px] text-sm rounded-md hidden md:block bg-indigo-700 text-white hover:bg-indigo-500 active:bg-indigo-600">
+            <Link
+              href="https://drive.google.com/file/d/1peDrKYTdngB00X8rN4dIeYcWoEwJFVg1/view?usp=sharing"
+              legacyBehavior
+            >
+              <a target="_blank" rel="noopener noreferrer">
+                My Resume
+              </a>
+            </Link>
+          </div>
         </div>
         <div className="flex items-center gap-3">
           <Link href="https://github.com/raxle789" legacyBehavior>
@@ -143,6 +149,16 @@ export default function Home() {
               </span>
               .
             </p>
+            <div className="w-fit mt-2 px-3 py-[10px] text-sm rounded-md block md:hidden hover:cursor-pointer bg-indigo-700 text-white hover:bg-indigo-500 active:bg-indigo-600">
+              <Link
+                href="https://drive.google.com/file/d/1peDrKYTdngB00X8rN4dIeYcWoEwJFVg1/view?usp=sharing"
+                legacyBehavior
+              >
+                <a target="_blank" rel="noopener noreferrer">
+                  My Resume
+                </a>
+              </Link>
+            </div>
             <p className="mt-6 text-xl font-bold">Tech Stacks</p>
             <div className="mt-2 flex items-center gap-2">
               <TooltipProvider>
@@ -250,7 +266,7 @@ export default function Home() {
                   />
                 </CardHeader>
                 <CardContent className="mt-[35%]">
-                  <p className="text-lg">{item.title}</p>
+                  <p className="text-lg font-bold">{item.title}</p>
                   <p className="text-sm text-muted-foreground my-2">
                     {item.desc}
                   </p>
@@ -285,7 +301,7 @@ export default function Home() {
           </h1>
           <div>
             <Card className="hover:scale-105 transition mb-4 flex">
-              <div className="flex justify-center items-start pl-6 pt-6 xl:min-w-[7%]">
+              <div className="flex justify-center items-start pl-6 pt-7 xl:min-w-[7%]">
                 <Image
                   src={LogoErajaya}
                   alt="logo_erajaya"
@@ -295,14 +311,14 @@ export default function Home() {
               </div>
               <div>
                 <CardHeader>
-                  <CardTitle>Frontend Developer</CardTitle>
-                  <CardDescription>
+                  <CardTitle className="text-xl">Frontend Developer</CardTitle>
+                  <CardDescription className="text-sm">
                     PT. Erajaya Swasembada, Tbk. · Internship <br />
                     Feb 2024 - Jun 2024
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <p>
+                  <p className="text-sm">
                     • Building the front-end of the recruitment information
                     system (ATS) website powered by Next.js. <br />• Contributed
                     to the development of the front-end of the website by 50%.
@@ -311,7 +327,7 @@ export default function Home() {
               </div>
             </Card>
             <Card className="hover:scale-105 transition mb-4 flex">
-              <div className="flex justify-center items-start pl-6 pt-6 xl:min-w-[7%]">
+              <div className="flex justify-center items-start pl-6 pt-7 xl:min-w-[7%]">
                 <Image
                   src={LogoBangkit}
                   alt="logo_bangkit"
@@ -321,15 +337,17 @@ export default function Home() {
               </div>
               <div>
                 <CardHeader>
-                  <CardTitle>Machine Learning Cohort</CardTitle>
-                  <CardDescription>
+                  <CardTitle className="text-xl">
+                    Machine Learning Cohort
+                  </CardTitle>
+                  <CardDescription className="text-sm">
                     Bangkit Academy led by Google, Tokopedia, Gojek, & Traveloka{" "}
                     <br />
                     Aug 2023 - Jan 2024
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <p>
+                  <p className="text-sm">
                     • Gained fundamental understanding in Python programming,
                     GitHub, Data Analytics, and Machine Learning, with a
                     specific emphasis on the TensorFlow framework. <br />•
@@ -359,8 +377,9 @@ export default function Home() {
       <footer className="mt-32">
         <div className="flex justify-center items-center">
           <div className="bg-indigo-700 rounded-xl px-4 py-2">
-            <p className="text-center">
-              Fatih Raxle / 089637127038 / fatihinfo03@gmail.com
+            <p className="text-center flex items-center gap-2">
+              <BsTelephoneFill className="text-base" /> 089637127038{" "}
+              <MdEmail className="text-[22px]" /> fatihinfo03@gmail.com
             </p>
           </div>
         </div>

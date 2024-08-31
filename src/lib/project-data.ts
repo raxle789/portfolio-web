@@ -6,9 +6,9 @@ import birthdayImg from "../../public/assets/Birthday-Greetings.png";
 import bookshelfAppImg from "../../public/assets/Aplikasi-Rak-Buku.png";
 import decimalConvertImg from "../../public/assets/Program-Konversi-Bilangan-Desimal.png";
 import phoneNumberImg from "../../public/assets/Program-Pembuatan-Nomor-Telepon.png";
-import atsImg from "../../public/assets/raxle789-ats-new.png";
+import atsImg from "../../public/assets/ats-img.png";
 import MLModelImg from "../../public/assets/raxle789-drowsiness-detection.png";
-import designSystemImg from "../../public/assets/raxle789-eskit-tailwind-reactjs-starter.png";
+import designSystemImg from "../../public/assets/Dialog-Default-Storybook.png";
 import { StaticImageData } from "next/image";
 
 export type TProject = {
@@ -23,14 +23,14 @@ export const projectData: TProject[] = [
   {
     image: atsImg,
     title: "ATS NEW",
-    desc: "the Recruitment System of Erajaya",
+    desc: "The New Recruitment System of Erajaya",
     deployLink: "",
     githubLink: "https://github.com/raxle789/ats-new",
   },
   {
     image: BoldImg,
     title: "Bold.",
-    desc: "A website for automatic rote management",
+    desc: "A website for automatic rote management.",
     deployLink: "https://bold-site.netlify.app/",
     githubLink: "https://github.com/raxle789/bold.",
   },
@@ -58,14 +58,14 @@ export const projectData: TProject[] = [
   {
     image: TeamImg,
     title: "Company Landing Page",
-    desc: "The Team Company Landing Page.",
+    desc: "The Team Company Landing Page",
     deployLink: "https://team-chi.vercel.app/",
     githubLink: "https://github.com/raxle789/company-landing-page",
   },
   {
     image: designSystemImg,
     title: "Design System",
-    desc: "A design system that is useful for speeding up website creation.",
+    desc: "A design system that is useful for speeding up website development.",
     deployLink: "",
     githubLink: "https://github.com/raxle789/eskit-tailwind-reactjs-starter",
   },
