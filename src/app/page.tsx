@@ -128,9 +128,9 @@ export default function Home() {
       <main>
         <div
           id="about"
-          className="px-14 mt-7 pb-3 flex justify-center items-center flex-wrap"
+          className="px-14 mt-7 md:mt-10 xl:mt-7 pb-3 flex justify-center items-center flex-wrap"
         >
-          <div className="z-10">
+          <div className="z-10 min-w-0">
             <h1 className="text-4xl font-bold">
               Hi <span className="text-indigo-700">there!</span>
             </h1>
@@ -160,7 +160,7 @@ export default function Home() {
               </Link>
             </div>
             <p className="mt-6 text-xl font-bold">Tech Stacks</p>
-            <div className="mt-2 flex items-center gap-2">
+            <div className="mt-2 flex items-center flex-wrap gap-2">
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger>
@@ -246,17 +246,17 @@ export default function Home() {
           </div>
         </div>
 
-        <div id="projects" className="px-14 lg:px-32 lg:mt-16">
+        <div id="projects" className="px-[6dvw] lg:px-32 lg:mt-16">
           <h1 className="mb-4 text-3xl font-bold underline decoration-indigo-700 underline-offset-4">
             My Projects
           </h1>
-          <div className="grid grid-cols-1 xl:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
             {projectData.map((item: TProject, index: number) => (
               <Card
                 key={index}
                 className="min-w-[300px] hover:scale-105 transition"
               >
-                <CardHeader className="w-full h-[70px]">
+                <CardHeader className="w-full">
                   <Image
                     className="w-full h-auto object-cover rounded-sm"
                     src={item.image}
@@ -265,7 +265,7 @@ export default function Home() {
                     height={149}
                   />
                 </CardHeader>
-                <CardContent className="mt-[35%]">
+                <CardContent>
                   <p className="text-lg font-bold">{item.title}</p>
                   <p className="text-sm text-muted-foreground my-2">
                     {item.desc}
@@ -295,13 +295,13 @@ export default function Home() {
           </div>
         </div>
 
-        <div id="experience" className="px-14 lg:px-32 mt-20">
+        <div id="experience" className="px-[6dvw] lg:px-32 mt-20">
           <h1 className="mb-4 text-3xl font-bold underline decoration-indigo-700 underline-offset-4">
             Experience
           </h1>
           <div>
             <Card className="hover:scale-105 transition mb-4 flex">
-              <div className="flex justify-center items-start pl-6 pt-7 xl:min-w-[7%]">
+              <div className="flex justify-center items-start pl-6 pt-7 min-w-[20%] md:min-w-[15%] xl:min-w-[7%]">
                 <Image
                   src={LogoErajaya}
                   alt="logo_erajaya"
@@ -327,7 +327,7 @@ export default function Home() {
               </div>
             </Card>
             <Card className="hover:scale-105 transition mb-4 flex">
-              <div className="flex justify-center items-start pl-6 pt-7 xl:min-w-[7%]">
+              <div className="flex justify-center items-start pl-6 pt-7 min-w-[20%] md:min-w-[15%] xl:min-w-[7%]">
                 <Image
                   src={LogoBangkit}
                   alt="logo_bangkit"
@@ -375,12 +375,19 @@ export default function Home() {
       </main>
 
       <footer className="mt-32">
-        <div className="flex justify-center items-center">
-          <div className="bg-indigo-700 rounded-xl px-4 py-2">
-            <p className="text-center flex items-center gap-2">
-              <BsTelephoneFill className="text-base" /> 089637127038{" "}
-              <MdEmail className="text-[22px]" /> fatihinfo03@gmail.com
-            </p>
+        <div className="flex justify-center items-center gap-3 flex-wrap">
+          <p className="text-lg font-bold">My Contact</p>
+          <div className="bg-indigo-700 rounded-xl px-4 py-2 w-fit">
+            <div className="flex justify-center items-center gap-2 flex-wrap w-fit">
+              <p className="text-center text-sm md:text-base">
+                <BsTelephoneFill className="text-base inline mr-1" />{" "}
+                089637127038{" "}
+              </p>
+              <p className="text-center text-sm md:text-base">
+                <MdEmail className="text-[22px] inline mr-1" />{" "}
+                fatihinfo03@gmail.com
+              </p>
+            </div>
           </div>
         </div>
         <div className="relative w-full h-[50vw] overflow-hidden">
