@@ -9,6 +9,8 @@ import phoneNumberImg from "../../public/assets/Program-Pembuatan-Nomor-Telepon.
 import atsImg from "../../public/assets/ats-img.png";
 import MLModelImg from "../../public/assets/raxle789-drowsiness-detection.png";
 import designSystemImg from "../../public/assets/Dialog-Default-Storybook.png";
+import unhiraAgrikultur from "../../public/assets/Unhira-Agrikultur.png";
+import syncWrite from "../../public/assets/SyncWrite.png";
 import { StaticImageData } from "next/image";
 
 export type TProject = {
@@ -20,6 +22,20 @@ export type TProject = {
 };
 
 export const projectData: TProject[] = [
+  {
+    image: unhiraAgrikultur,
+    title: "Unhira Agrikultur",
+    desc: "The company profile website which operates in the field of supplying vegetables and fruits for restaurants, eating places, and others.",
+    deployLink: "https://www.unhiraagrikultur.com/",
+    githubLink: "",
+  },
+  {
+    image: syncWrite,
+    title: "Sync Write",
+    desc: "The Simple Google Doc Clone",
+    deployLink: "",
+    githubLink: "https://github.com/raxle789/syncwrite-client",
+  },
   {
     image: atsImg,
     title: "ATS NEW",
