@@ -289,7 +289,12 @@ export default function Home() {
                   <p className="text-sm">
                     <Link href={item.githubLink} legacyBehavior>
                       <a target="_blank" rel="noopener noreferrer">
-                        <FaGithub className="mr-1 inline" /> {item.githubLink}
+                        <FaGithub
+                          className={`mr-1 ${
+                            item.githubLink ? "inline" : "hidden"
+                          }`}
+                        />{" "}
+                        {item.githubLink}
                       </a>
                     </Link>
                   </p>
