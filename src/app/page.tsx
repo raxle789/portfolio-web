@@ -390,7 +390,7 @@ export default function Home() {
             <div className="flex justify-center items-center gap-2 flex-wrap w-fit">
               <p className="text-center text-sm md:text-base">
                 <BsTelephoneFill className="text-base inline mr-1" />{" "}
-                089637127038{" "}
+                081280543170{" "}
               </p>
               <p className="text-center text-sm md:text-base">
                 <MdEmail className="text-[22px] inline mr-1" />{" "}
