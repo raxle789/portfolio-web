@@ -23,6 +23,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "../../public/assets/logo.png";
@@ -52,6 +53,12 @@ export default function Home() {
   // const handleClick = () => {
   //   setIsOpen(!isOpen);
   // };
+  const formatLinkText = (url: string) => {
+    return url
+      .replace(/^https?:\/\//i, "")
+      .replace(/^www\./i, "")
+      .replace(/\/$/, "");
+  };
   return (
     <>
       <header className="px-4 py-3 flex justify-between items-center sticky top-0 bg-background z-20">
@@ -219,7 +226,7 @@ export default function Home() {
                     <SiMongodb className="text-3xl" />
                   </TooltipTrigger>
                   <TooltipContent>
-                    <p>MongoDb</p>
+                    <p>MongoDB</p>
                   </TooltipContent>
                 </Tooltip>
                 <Tooltip>
@@ -271,9 +278,16 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-lg font-bold">{item.title}</p>
-                  <p className="text-sm text-muted-foreground my-2">
+                  {/* <p className="text-sm text-muted-foreground my-2">
                     {item.desc}
-                  </p>
+                  </p> */}
+                  <div className="flex flex-wrap gap-1 my-2">
+                    {item.stacks.map((name, id) => (
+                      <Badge key={id} variant="secondary">
+                        {name}
+                      </Badge>
+                    ))}
+                  </div>
                   <p className="text-sm">
                     <Link href={item.deployLink} legacyBehavior>
                       <a target="_blank" rel="noopener noreferrer">
@@ -282,7 +296,7 @@ export default function Home() {
                             item.deployLink ? "inline" : "hidden"
                           }`}
                         />{" "}
-                        {item.deployLink}
+                        {formatLinkText(item.deployLink)}
                       </a>
                     </Link>
                   </p>
@@ -294,7 +308,7 @@ export default function Home() {
                             item.githubLink ? "inline" : "hidden"
                           }`}
                         />{" "}
-                        {item.githubLink}
+                        {formatLinkText(item.githubLink)}
                       </a>
                     </Link>
                   </p>
