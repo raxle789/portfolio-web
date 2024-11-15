@@ -17,7 +17,6 @@ import { StaticImageData } from "next/image";
 export type TProject = {
   image: StaticImageData;
   title: string;
-  desc?: string;
   stacks: string[];
   deployLink: string;
   githubLink: string;
