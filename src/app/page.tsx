@@ -413,14 +413,22 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="relative w-full h-[50vw] overflow-hidden">
+        <div className="w-full h-full">
+          <Image
+            className="object-cover"
+            src={Flower2}
+            alt="flower2"
+            // layout="responsive"
+          />
+        </div>
+        {/* <div className="relative w-full h-[50vw] overflow-hidden">
           <Image
             className="object-cover clip-half"
             src={Flower2}
             alt="flower2"
             layout="responsive"
           />
-        </div>
+        </div> */}
       </footer>
     </>
   );
