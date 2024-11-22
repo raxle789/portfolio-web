@@ -265,7 +265,7 @@ export default function Home() {
             {projectData.map((item: TProject, index: number) => (
               <Card
                 key={index}
-                className="min-w-[300px] hover:scale-105 transition"
+                className="min-w-[300px] hover:shadow-2xl hover:shadow-indigo-600 transition"
               >
                 <CardHeader className="w-full">
                   <Image
@@ -323,7 +323,7 @@ export default function Home() {
             Experience
           </h1>
           <div>
-            <Card className="hover:scale-105 transition mb-4 flex">
+            <Card className="hover:shadow-2xl hover:shadow-indigo-600 transition mb-4 flex">
               <div className="flex justify-center items-start pl-6 pt-7 min-w-[20%] md:min-w-[15%] xl:min-w-[7%]">
                 <Image
                   src={LogoErajaya}
@@ -349,7 +349,7 @@ export default function Home() {
                 </CardContent>
               </div>
             </Card>
-            <Card className="hover:scale-105 transition mb-4 flex">
+            <Card className="hover:shadow-2xl hover:shadow-indigo-600 transition mb-4 flex">
               <div className="flex justify-center items-start pl-6 pt-7 min-w-[20%] md:min-w-[15%] xl:min-w-[7%]">
                 <Image
                   src={LogoBangkit}
@@ -413,7 +413,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="w-full h-full">
+        <div className="w-full h-full px-7 pb-12">
           <Image
             className="object-cover"
             src={Flower2}
