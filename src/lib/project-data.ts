@@ -39,7 +39,7 @@ export const projectData: TProject[] = [
   },
   {
     image: syncWriteImg,
-    title: "Sync Write",
+    title: "SyncWrite",
     stacks: [
       "Next.js",
       "Express.js",

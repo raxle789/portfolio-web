@@ -42,7 +42,9 @@ import { SiBootstrap } from "react-icons/si";
 import { RiFirebaseFill } from "react-icons/ri";
 import { SiMongodb } from "react-icons/si";
 import { SiExpress } from "react-icons/si";
-import { SiPhp } from "react-icons/si";
+// import { SiPhp } from "react-icons/si";
+import { SiLaravel } from "react-icons/si";
+import { FaPython } from "react-icons/fa6";
 import { FaLink } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { BsTelephoneFill } from "react-icons/bs";
@@ -239,10 +241,19 @@ export default function Home() {
                 </Tooltip>
                 <Tooltip>
                   <TooltipTrigger>
-                    <SiPhp className="text-4xl ml-1" />
+                    {/* <SiPhp className="text-4xl ml-1" /> */}
+                    <SiLaravel className="text-3xl ml-1" />
                   </TooltipTrigger>
                   <TooltipContent>
-                    <p>PHP</p>
+                    <p>Laravel</p>
+                  </TooltipContent>
+                </Tooltip>
+                <Tooltip>
+                  <TooltipTrigger>
+                    <FaPython className="text-3xl" />
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>Python</p>
                   </TooltipContent>
                 </Tooltip>
               </TooltipProvider>
