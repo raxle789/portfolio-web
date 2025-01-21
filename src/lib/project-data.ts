@@ -11,7 +11,7 @@ import MLModelImg from "../../public/assets/raxle789-drowsiness-detection.png";
 import designSystemImg from "../../public/assets/Dialog-Default-Storybook.png";
 import unhiraAgrikulturImg from "../../public/assets/Unhira-Agrikultur.png";
 import syncWriteImg from "../../public/assets/SyncWrite.png";
-import medikaMartImg from "../../public/assets/metika-mart.png";
+import medikaMartImg from "../../public/assets/medika-mart.jpg";
 import { StaticImageData } from "next/image";
 
 export type TProject = {
@@ -49,7 +49,7 @@ export const projectData: TProject[] = [
       "Tailwind CSS",
     ],
     deployLink: "",
-    githubLink: "https://github.com/raxle789/syncwrite-client",
+    githubLink: "https://github.com/raxle789/gdocs-clone",
   },
   {
     image: atsImg,
