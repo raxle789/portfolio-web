@@ -29,6 +29,7 @@ import Image from "next/image";
 import Logo from "../../public/assets/logo.png";
 import { FiMenu } from "react-icons/fi";
 import { FaGithub } from "react-icons/fa";
+import { FiVideo } from "react-icons/fi";
 import { FaLinkedin } from "react-icons/fa";
 import Flower1 from "../../public/assets/flower2.png";
 import Flower2 from "../../public/assets/flower3.png";
@@ -320,6 +321,24 @@ export default function Home() {
                           }`}
                         />{" "}
                         {formatLinkText(item.githubLink)}
+                      </a>
+                    </Link>
+                  </p>
+                  <p className="text-sm mt-[1px]">
+                    <Link href={item.demoLink} legacyBehavior>
+                      <a
+                        className="flex items-center gap-1"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FiVideo
+                          className={`mr-1 flex-shrink-0 ${
+                            item.demoLink ? "inline" : "hidden"
+                          }`}
+                        />{" "}
+                        <span className="inline-block w-[90%] overflow-hidden text-ellipsis whitespace-nowrap">
+                          {formatLinkText(item.demoLink)}
+                        </span>
                       </a>
                     </Link>
                   </p>

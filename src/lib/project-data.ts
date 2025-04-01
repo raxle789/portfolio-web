@@ -12,6 +12,7 @@ import designSystemImg from "../../public/assets/Dialog-Default-Storybook.png";
 import unhiraAgrikulturImg from "../../public/assets/Unhira-Agrikultur.png";
 import syncWriteImg from "../../public/assets/SyncWrite.png";
 import medikaMartImg from "../../public/assets/medika-mart.jpg";
+import pklDashboardImg from "../../public/assets/dashboard-SiPKL.png";
 import { StaticImageData } from "next/image";
 
 export type TProject = {
@@ -20,15 +21,26 @@ export type TProject = {
   stacks: string[];
   deployLink: string;
   githubLink: string;
+  demoLink: string;
 };
 
 export const projectData: TProject[] = [
+  {
+    image: pklDashboardImg,
+    title: "Internship Dashboard",
+    stacks: ["Next.js", "Typescript", "Tailwind CSS", "Prisma"],
+    deployLink: "",
+    githubLink: "",
+    demoLink:
+      "https://drive.google.com/file/d/1yIgWHInDNPNnRrI9bayCg9ZaHQ1HwElh/view?usp=sharing",
+  },
   {
     image: medikaMartImg,
     title: "Medika Mart",
     stacks: ["Next.js", "Firebase", "Typescript", "Tailwind CSS"],
     deployLink: "https://medikamart.vercel.app/",
     githubLink: "https://github.com/raxle789/medika-mart",
+    demoLink: "",
   },
   {
     image: unhiraAgrikulturImg,
@@ -36,6 +48,7 @@ export const projectData: TProject[] = [
     stacks: ["Next.js", "Typescript", "Tailwind CSS"],
     deployLink: "https://www.unhiraagrikultur.com/",
     githubLink: "",
+    demoLink: "",
   },
   {
     image: syncWriteImg,
@@ -50,6 +63,8 @@ export const projectData: TProject[] = [
     ],
     deployLink: "",
     githubLink: "https://github.com/raxle789/gdocs-clone",
+    demoLink:
+      "https://drive.google.com/file/d/1DftabeDGwjaQhrDrGoiJJLDqpeIct9p5/view?usp=sharing",
   },
   {
     image: atsImg,
@@ -57,6 +72,8 @@ export const projectData: TProject[] = [
     stacks: ["Next.js", "Typescript", "Bootstrap"],
     deployLink: "",
     githubLink: "https://github.com/raxle789/ats-new",
+    demoLink:
+      "https://drive.google.com/file/d/1HQB365i0s7gh8Q3Rg4PbAGdulEJ23DSP/view",
   },
   {
     image: BoldImg,
@@ -64,6 +81,7 @@ export const projectData: TProject[] = [
     stacks: ["React js", "Firebase", "CSS"],
     deployLink: "https://bold-site.netlify.app/",
     githubLink: "https://github.com/raxle789/bold.",
+    demoLink: "",
   },
   {
     image: WeatherImg,
@@ -71,6 +89,7 @@ export const projectData: TProject[] = [
     stacks: ["React js", "CSS"],
     deployLink: "https://findsweather.netlify.app/",
     githubLink: "https://github.com/raxle789/Weather",
+    demoLink: "",
   },
   {
     image: VDPlayerImg,
@@ -78,6 +97,7 @@ export const projectData: TProject[] = [
     stacks: ["React js", "CSS"],
     deployLink: "https://vd-player.netlify.app/",
     githubLink: "https://github.com/raxle789/Video-Player",
+    demoLink: "",
   },
   {
     image: birthdayImg,
@@ -85,6 +105,7 @@ export const projectData: TProject[] = [
     stacks: ["Next.js", "Typescript", "Tailwind CSS"],
     deployLink: "https://birthday-web-theta.vercel.app/",
     githubLink: "https://github.com/raxle789/birthday-web",
+    demoLink: "",
   },
   {
     image: TeamImg,
@@ -92,6 +113,7 @@ export const projectData: TProject[] = [
     stacks: ["HTML", "Bootstrap"],
     deployLink: "https://team-chi.vercel.app/",
     githubLink: "https://github.com/raxle789/company-landing-page",
+    demoLink: "",
   },
   {
     image: designSystemImg,
@@ -99,6 +121,8 @@ export const projectData: TProject[] = [
     stacks: ["React js", "Typescript", "Tailwind CSS"],
     deployLink: "",
     githubLink: "https://github.com/raxle789/eskit-tailwind-reactjs-starter",
+    demoLink:
+      "https://drive.google.com/file/d/1cV92KkDn1Pc_u52xGgraUrqOQnzz6ukb/view?usp=sharing",
   },
   {
     image: MLModelImg,
@@ -106,6 +130,7 @@ export const projectData: TProject[] = [
     stacks: ["Python", "TensorFlow"],
     deployLink: "",
     githubLink: "https://github.com/raxle789/drowsiness-detection",
+    demoLink: "",
   },
   {
     image: bookshelfAppImg,
@@ -113,6 +138,7 @@ export const projectData: TProject[] = [
     stacks: ["HTML", "Javascript", "CSS"],
     deployLink: "https://ur-bookshelf.netlify.app/",
     githubLink: "https://github.com/raxle789/Bookshelf-App",
+    demoLink: "",
   },
   {
     image: decimalConvertImg,
@@ -120,6 +146,7 @@ export const projectData: TProject[] = [
     stacks: ["HTML", "Javascript", "CSS"],
     deployLink: "https://konversbilangan.netlify.app/",
     githubLink: "https://github.com/raxle789/Konvers-Desimal",
+    demoLink: "",
   },
   {
     image: phoneNumberImg,
@@ -127,5 +154,6 @@ export const projectData: TProject[] = [
     stacks: ["HTML", "Javascript", "CSS"],
     deployLink: "https://nomor-telepon.netlify.app/",
     githubLink: "https://github.com/raxle789/Phone-Number",
+    demoLink: "",
   },
 ];
