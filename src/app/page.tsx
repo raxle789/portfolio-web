@@ -116,7 +116,7 @@ export default function Home() {
           </NavigationMenu>
           <div className="hover:cursor-pointer ml-2 px-3 py-[10px] text-sm rounded-md hidden md:block bg-indigo-700 text-white hover:bg-indigo-500 active:bg-indigo-600">
             <Link
-              href="https://drive.google.com/file/d/1Rr5zwIUVh4kNOjh7to9Fjpmg177fJCKh/view?usp=sharing"
+              href="https://drive.google.com/file/d/1AwT1rZzpK9PJ_EBr_5a2CTayZ-vOxWo7/view?usp=sharing"
               legacyBehavior
             >
               <a target="_blank" rel="noopener noreferrer">
@@ -165,7 +165,7 @@ export default function Home() {
             </p>
             <div className="w-fit mt-2 px-3 py-[10px] text-sm rounded-md block md:hidden hover:cursor-pointer bg-indigo-700 text-white hover:bg-indigo-500 active:bg-indigo-600">
               <Link
-                href="https://drive.google.com/file/d/1Rr5zwIUVh4kNOjh7to9Fjpmg177fJCKh/view?usp=sharing"
+                href="https://drive.google.com/file/d/1AwT1rZzpK9PJ_EBr_5a2CTayZ-vOxWo7/view?usp=sharing"
                 legacyBehavior
               >
                 <a target="_blank" rel="noopener noreferrer">
