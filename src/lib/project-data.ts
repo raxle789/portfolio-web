@@ -13,6 +13,7 @@ import unhiraAgrikulturImg from "../../public/assets/Unhira-Agrikultur.png";
 import syncWriteImg from "../../public/assets/SyncWrite.png";
 import medikaMartImg from "../../public/assets/medika-mart.jpg";
 import pklDashboardImg from "../../public/assets/dashboard-SiPKL.png";
+import chillTalkImg from "../../public/assets/chill-talk.png";
 import { StaticImageData } from "next/image";
 
 export type TProject = {
@@ -25,6 +26,14 @@ export type TProject = {
 };
 
 export const projectData: TProject[] = [
+  {
+    image: chillTalkImg,
+    title: "Chill Talk",
+    stacks: ["Vue.js", "Firebase", "Tailwind CSS", "Typescript"],
+    deployLink: "https://chill-talk.netlify.app/",
+    githubLink: "https://github.com/raxle789/chill-talk",
+    demoLink: "",
+  },
   {
     image: pklDashboardImg,
     title: "Internship Dashboard",
@@ -78,7 +87,7 @@ export const projectData: TProject[] = [
   {
     image: BoldImg,
     title: "Bold.",
-    stacks: ["React js", "Firebase", "CSS"],
+    stacks: ["React.js", "Firebase", "CSS"],
     deployLink: "https://bold-site.netlify.app/",
     githubLink: "https://github.com/raxle789/bold.",
     demoLink: "",
@@ -86,7 +95,7 @@ export const projectData: TProject[] = [
   {
     image: WeatherImg,
     title: "Weather App",
-    stacks: ["React js", "CSS"],
+    stacks: ["React.js", "CSS"],
     deployLink: "https://findsweather.netlify.app/",
     githubLink: "https://github.com/raxle789/Weather",
     demoLink: "",
@@ -94,7 +103,7 @@ export const projectData: TProject[] = [
   {
     image: VDPlayerImg,
     title: "Video Player",
-    stacks: ["React js", "CSS"],
+    stacks: ["React.js", "CSS"],
     deployLink: "https://vd-player.netlify.app/",
     githubLink: "https://github.com/raxle789/Video-Player",
     demoLink: "",
@@ -118,7 +127,7 @@ export const projectData: TProject[] = [
   {
     image: designSystemImg,
     title: "Design System",
-    stacks: ["React js", "Typescript", "Tailwind CSS"],
+    stacks: ["React.js", "Typescript", "Tailwind CSS"],
     deployLink: "",
     githubLink: "https://github.com/raxle789/eskit-tailwind-reactjs-starter",
     demoLink:

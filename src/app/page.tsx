@@ -46,6 +46,7 @@ import { SiExpress } from "react-icons/si";
 // import { SiPhp } from "react-icons/si";
 import { SiLaravel } from "react-icons/si";
 import { FaPython } from "react-icons/fa6";
+import { FaVuejs } from "react-icons/fa";
 import { FaLink } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { BsTelephoneFill } from "react-icons/bs";
@@ -189,7 +190,15 @@ export default function Home() {
                     <FaReact className="text-3xl" />
                   </TooltipTrigger>
                   <TooltipContent>
-                    <p>React js</p>
+                    <p>React.js</p>
+                  </TooltipContent>
+                </Tooltip>
+                <Tooltip>
+                  <TooltipTrigger>
+                    <FaVuejs className="text-3xl" />
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>Vue.js</p>
                   </TooltipContent>
                 </Tooltip>
                 <Tooltip>
