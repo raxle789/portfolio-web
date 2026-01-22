@@ -1,6 +1,6 @@
-"use client";
-import React from "react";
-import { cn } from "@/lib/utils";
+"use client"
+import React from "react"
+import { cn } from "@/lib/utils"
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -9,48 +9,49 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
+} from "@/components/ui/navigation-menu"
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/tooltip";
+} from "@/components/ui/tooltip"
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import Link from "next/link";
-import Image from "next/image";
-import Logo from "../../public/assets/logo.png";
-import { FiMenu } from "react-icons/fi";
-import { FaGithub } from "react-icons/fa";
-import { FiVideo } from "react-icons/fi";
-import { FaLinkedin } from "react-icons/fa";
-import Flower1 from "../../public/assets/flower2.png";
-import Flower2 from "../../public/assets/flower3.png";
-import LogoBangkit from "../../public/assets/logo_bangkit.jpeg";
-import LogoErajaya from "../../public/assets/logo_erajaya_biru.jpeg";
-import { SiNextdotjs } from "react-icons/si";
-import { FaReact } from "react-icons/fa";
-import { BiLogoTypescript } from "react-icons/bi";
-import { SiTailwindcss } from "react-icons/si";
-import { SiBootstrap } from "react-icons/si";
-import { RiFirebaseFill } from "react-icons/ri";
-import { SiMongodb } from "react-icons/si";
-import { SiExpress } from "react-icons/si";
+} from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import Link from "next/link"
+import Image from "next/image"
+import Logo from "../../public/assets/logo.png"
+import { FiMenu } from "react-icons/fi"
+import { FaGithub } from "react-icons/fa"
+import { FiVideo } from "react-icons/fi"
+import { FaLinkedin } from "react-icons/fa"
+import Flower1 from "../../public/assets/flower2.png"
+import Flower2 from "../../public/assets/flower3.png"
+import LogoBangkit from "../../public/assets/logo_bangkit.jpeg"
+import LogoErajaya from "../../public/assets/logo_erajaya_biru.jpeg"
+import { SiNextdotjs } from "react-icons/si"
+import { FaReact } from "react-icons/fa"
+import { BiLogoTypescript } from "react-icons/bi"
+import { SiTailwindcss } from "react-icons/si"
+import { SiBootstrap } from "react-icons/si"
+import { RiFirebaseFill } from "react-icons/ri"
+import { SiMongodb } from "react-icons/si"
+import { SiExpress } from "react-icons/si"
 // import { SiPhp } from "react-icons/si";
-import { SiLaravel } from "react-icons/si";
-import { FaPython } from "react-icons/fa6";
-import { FaVuejs } from "react-icons/fa";
-import { FaLink } from "react-icons/fa6";
-import { MdEmail } from "react-icons/md";
-import { BsTelephoneFill } from "react-icons/bs";
-import { projectData, TProject } from "@/lib/project-data";
+import { SiLaravel } from "react-icons/si"
+import { FaPython } from "react-icons/fa6"
+import { FaVuejs } from "react-icons/fa"
+import { FaLink } from "react-icons/fa6"
+import { MdEmail } from "react-icons/md"
+import { BsTelephoneFill } from "react-icons/bs"
+import { projectData, TProject } from "@/lib/project-data"
+import { SpotLightItem, Spotlight } from "@/components/spotlight"
 
 export default function Home() {
   // const [isOpen, setIsOpen] = useState(false);
@@ -61,8 +62,8 @@ export default function Home() {
     return url
       .replace(/^https?:\/\//i, "")
       .replace(/^www\./i, "")
-      .replace(/\/$/, "");
-  };
+      .replace(/\/$/, "")
+  }
   return (
     <>
       <header className="px-4 py-3 flex justify-between items-center sticky top-0 bg-background z-20">
@@ -271,7 +272,7 @@ export default function Home() {
           </div>
           <div>
             <Image
-              className="w-[500px] h-auto hover:scale-110 transition"
+              className="w-[500px] h-auto hover:scale-110 transition duration-500 ease-in-out"
               src={Flower1}
               alt="flower1"
             />
@@ -284,75 +285,143 @@ export default function Home() {
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
             {projectData.map((item: TProject, index: number) => (
-              <Card
-                key={index}
-                className="min-w-[300px] hover:shadow-2xl hover:shadow-indigo-600 transition"
-              >
-                <CardHeader className="w-full">
-                  <Image
-                    className="w-full h-auto object-cover rounded-sm"
-                    src={item.image}
-                    alt="project-image"
-                    width={300}
-                    height={149}
-                  />
-                </CardHeader>
-                <CardContent>
-                  <p className="text-lg font-bold">{item.title}</p>
-                  {/* <p className="text-sm text-muted-foreground my-2">
-                    {item.desc}
-                  </p> */}
-                  <div className="flex flex-wrap gap-1 my-2">
-                    {item.stacks.map((name, id) => (
-                      <Badge key={id} variant="secondary">
-                        {name}
-                      </Badge>
-                    ))}
-                  </div>
-                  <p className="text-sm">
-                    <Link href={item.deployLink} legacyBehavior>
-                      <a target="_blank" rel="noopener noreferrer">
-                        <FaLink
-                          className={`mr-1 ${
-                            item.deployLink ? "inline" : "hidden"
-                          }`}
-                        />{" "}
-                        {formatLinkText(item.deployLink)}
-                      </a>
-                    </Link>
-                  </p>
-                  <p className="text-sm">
-                    <Link href={item.githubLink} legacyBehavior>
-                      <a target="_blank" rel="noopener noreferrer">
-                        <FaGithub
-                          className={`mr-1 ${
-                            item.githubLink ? "inline" : "hidden"
-                          }`}
-                        />{" "}
-                        {formatLinkText(item.githubLink)}
-                      </a>
-                    </Link>
-                  </p>
-                  <p className="text-sm mt-[1px]">
-                    <Link href={item.demoLink} legacyBehavior>
-                      <a
-                        className="flex items-center gap-1"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <FiVideo
-                          className={`mr-1 flex-shrink-0 ${
-                            item.demoLink ? "inline" : "hidden"
-                          }`}
-                        />{" "}
-                        <span className="inline-block w-[90%] overflow-hidden text-ellipsis whitespace-nowrap">
-                          {formatLinkText(item.demoLink)}
-                        </span>
-                      </a>
-                    </Link>
-                  </p>
-                </CardContent>
-              </Card>
+              <div key={index} className="min-w-[300px] rounded-md">
+                <Spotlight className="w-full h-full">
+                  <SpotLightItem className="h-full">
+                    <div className="relative bg-black h-full rounded-lg">
+                      <>
+                        <CardHeader className="w-full">
+                          <Image
+                            className="w-full h-auto object-cover rounded-sm"
+                            src={item.image}
+                            alt="project-image"
+                            width={300}
+                            height={149}
+                          />
+                        </CardHeader>
+                        <CardContent>
+                          <p className="text-lg font-bold">{item.title}</p>
+                          <div className="flex flex-wrap gap-1 my-2">
+                            {item.stacks.map((name, id) => (
+                              <Badge key={id} variant="secondary">
+                                {name}
+                              </Badge>
+                            ))}
+                          </div>
+                          <p className="text-sm">
+                            <Link href={item.deployLink} legacyBehavior>
+                              <a target="_blank" rel="noopener noreferrer">
+                                <FaLink
+                                  className={`mr-1 ${
+                                    item.deployLink ? "inline" : "hidden"
+                                  }`}
+                                />{" "}
+                                {formatLinkText(item.deployLink)}
+                              </a>
+                            </Link>
+                          </p>
+                          <p className="text-sm">
+                            <Link href={item.githubLink} legacyBehavior>
+                              <a target="_blank" rel="noopener noreferrer">
+                                <FaGithub
+                                  className={`mr-1 ${
+                                    item.githubLink ? "inline" : "hidden"
+                                  }`}
+                                />{" "}
+                                {formatLinkText(item.githubLink)}
+                              </a>
+                            </Link>
+                          </p>
+                          <p className="text-sm mt-[1px]">
+                            <Link href={item.demoLink} legacyBehavior>
+                              <a
+                                className="flex items-center gap-1"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <FiVideo
+                                  className={`mr-1 flex-shrink-0 ${
+                                    item.demoLink ? "inline" : "hidden"
+                                  }`}
+                                />{" "}
+                                <span className="inline-block w-[90%] overflow-hidden text-ellipsis whitespace-nowrap">
+                                  {formatLinkText(item.demoLink)}
+                                </span>
+                              </a>
+                            </Link>
+                          </p>
+                        </CardContent>
+                      </>
+                    </div>
+                  </SpotLightItem>
+                </Spotlight>
+              </div>
+              // <Card
+              //   key={index}
+              //   className="min-w-[300px] hover:shadow-2xl hover:shadow-indigo-600 transition"
+              // >
+              //   <CardHeader className="w-full">
+              //     <Image
+              //       className="w-full h-auto object-cover rounded-sm"
+              //       src={item.image}
+              //       alt="project-image"
+              //       width={300}
+              //       height={149}
+              //     />
+              //   </CardHeader>
+              //   <CardContent>
+              //     <p className="text-lg font-bold">{item.title}</p>
+              //     <div className="flex flex-wrap gap-1 my-2">
+              //       {item.stacks.map((name, id) => (
+              //         <Badge key={id} variant="secondary">
+              //           {name}
+              //         </Badge>
+              //       ))}
+              //     </div>
+              //     <p className="text-sm">
+              //       <Link href={item.deployLink} legacyBehavior>
+              //         <a target="_blank" rel="noopener noreferrer">
+              //           <FaLink
+              //             className={`mr-1 ${
+              //               item.deployLink ? "inline" : "hidden"
+              //             }`}
+              //           />{" "}
+              //           {formatLinkText(item.deployLink)}
+              //         </a>
+              //       </Link>
+              //     </p>
+              //     <p className="text-sm">
+              //       <Link href={item.githubLink} legacyBehavior>
+              //         <a target="_blank" rel="noopener noreferrer">
+              //           <FaGithub
+              //             className={`mr-1 ${
+              //               item.githubLink ? "inline" : "hidden"
+              //             }`}
+              //           />{" "}
+              //           {formatLinkText(item.githubLink)}
+              //         </a>
+              //       </Link>
+              //     </p>
+              //     <p className="text-sm mt-[1px]">
+              //       <Link href={item.demoLink} legacyBehavior>
+              //         <a
+              //           className="flex items-center gap-1"
+              //           target="_blank"
+              //           rel="noopener noreferrer"
+              //         >
+              //           <FiVideo
+              //             className={`mr-1 flex-shrink-0 ${
+              //               item.demoLink ? "inline" : "hidden"
+              //             }`}
+              //           />{" "}
+              //           <span className="inline-block w-[90%] overflow-hidden text-ellipsis whitespace-nowrap">
+              //             {formatLinkText(item.demoLink)}
+              //           </span>
+              //         </a>
+              //       </Link>
+              //     </p>
+              //   </CardContent>
+              // </Card>
             ))}
           </div>
         </div>
@@ -470,7 +539,7 @@ export default function Home() {
         </div> */}
       </footer>
     </>
-  );
+  )
 }
 
 const ListItem = React.forwardRef<
@@ -484,7 +553,7 @@ const ListItem = React.forwardRef<
           ref={ref}
           className={cn(
             "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            className
+            className,
           )}
           {...props}
         >
@@ -495,6 +564,6 @@ const ListItem = React.forwardRef<
         </a>
       </NavigationMenuLink>
     </li>
-  );
-});
-ListItem.displayName = "ListItem";
+  )
+})
+ListItem.displayName = "ListItem"
