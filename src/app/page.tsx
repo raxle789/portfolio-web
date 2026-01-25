@@ -54,10 +54,6 @@ import { projectData, TProject } from "@/lib/project-data"
 import { SpotLightItem, Spotlight } from "@/components/spotlight"
 
 export default function Home() {
-  // const [isOpen, setIsOpen] = useState(false);
-  // const handleClick = () => {
-  //   setIsOpen(!isOpen);
-  // };
   const formatLinkText = (url: string) => {
     return url
       .replace(/^https?:\/\//i, "")
@@ -303,7 +299,11 @@ export default function Home() {
                           <p className="text-lg font-bold">{item.title}</p>
                           <div className="flex flex-wrap gap-1 my-2">
                             {item.stacks.map((name, id) => (
-                              <Badge key={id} variant="secondary">
+                              <Badge
+                                key={id}
+                                variant="secondary"
+                                className="select-none"
+                              >
                                 {name}
                               </Badge>
                             ))}
@@ -430,79 +430,81 @@ export default function Home() {
           <h1 className="mb-4 text-3xl font-bold underline decoration-indigo-700 underline-offset-4">
             Experience
           </h1>
-          <div>
-            <Card className="hover:shadow-2xl hover:shadow-indigo-600 transition mb-4 flex">
-              <div className="flex justify-center items-start pl-6 pt-7 min-w-[20%] md:min-w-[15%] xl:min-w-[7%]">
-                <Image
-                  src={LogoErajaya}
-                  alt="logo_erajaya"
-                  width={60}
-                  height={60}
-                />
-              </div>
-              <div>
-                <CardHeader>
-                  <CardTitle className="text-xl">Frontend Developer</CardTitle>
-                  <CardDescription className="text-sm">
-                    PT. Erajaya Swasembada, Tbk. · Internship <br />
-                    Feb 2024 - Jun 2024
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm">
-                    • Building the front-end of the recruitment information
-                    system (ATS) website powered by Next.js. <br />• Contributed
-                    to the development of the front-end of the website by 50%.
-                  </p>
-                </CardContent>
-              </div>
-            </Card>
-            <Card className="hover:shadow-2xl hover:shadow-indigo-600 transition mb-4 flex">
-              <div className="flex justify-center items-start pl-6 pt-7 min-w-[20%] md:min-w-[15%] xl:min-w-[7%]">
-                <Image
-                  src={LogoBangkit}
-                  alt="logo_bangkit"
-                  width={60}
-                  height={60}
-                />
-              </div>
-              <div>
-                <CardHeader>
-                  <CardTitle className="text-xl">
-                    Machine Learning Cohort
-                  </CardTitle>
-                  <CardDescription className="text-sm">
-                    Bangkit Academy led by Google, Tokopedia, Gojek, & Traveloka{" "}
-                    <br />
-                    Aug 2023 - Jan 2024
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm">
-                    • Gained fundamental understanding in Python programming,
-                    GitHub, Data Analytics, and Machine Learning, with a
-                    specific emphasis on the TensorFlow framework. <br />•
-                    Applied a variety of Machine Learning techniques in
-                    real-world projects, encompassing Regression, Computer
-                    Vision, Deep Neural Networks, Convolutional Neural Networks,
-                    Natural Language Processing, and Time Series Forecasting.
-                  </p>
-                </CardContent>
-              </div>
-            </Card>
+          <div className="space-y-4">
+            <Spotlight className="w-full h-full">
+              <SpotLightItem className="h-full">
+                <div className="flex relative bg-black h-full rounded-lg">
+                  <div className="flex justify-center items-start pl-6 pt-7 min-w-[20%] md:min-w-[15%] xl:min-w-[7%]">
+                    <Image
+                      src={LogoErajaya}
+                      alt="logo_erajaya"
+                      width={60}
+                      height={60}
+                    />
+                  </div>
+                  <div>
+                    <CardHeader>
+                      <CardTitle className="text-xl">
+                        Frontend Developer
+                      </CardTitle>
+                      <CardDescription className="text-sm">
+                        PT. Erajaya Swasembada, Tbk. · Internship <br />
+                        Feb 2024 - Jun 2024
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-sm">
+                        • Building the front-end of the recruitment information
+                        system (ATS) website powered by Next.js. <br />•
+                        Contributed to the development of the front-end of the
+                        website by 50%.
+                      </p>
+                    </CardContent>
+                  </div>
+                </div>
+              </SpotLightItem>
+            </Spotlight>
+
+            <Spotlight className="w-full h-full">
+              <SpotLightItem className="h-full">
+                <div className="flex relative bg-black h-full rounded-lg">
+                  <div className="flex justify-center items-start pl-6 pt-7 min-w-[20%] md:min-w-[15%] xl:min-w-[7%]">
+                    <Image
+                      src={LogoBangkit}
+                      alt="logo_bangkit"
+                      width={60}
+                      height={60}
+                    />
+                  </div>
+                  <div>
+                    <CardHeader>
+                      <CardTitle className="text-xl">
+                        Machine Learning Cohort
+                      </CardTitle>
+                      <CardDescription className="text-sm">
+                        Bangkit Academy led by Google, Tokopedia, Gojek, &
+                        Traveloka <br />
+                        Aug 2023 - Jan 2024
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-sm">
+                        • Gained fundamental understanding in Python
+                        programming, GitHub, Data Analytics, and Machine
+                        Learning, with a specific emphasis on the TensorFlow
+                        framework. <br />• Applied a variety of Machine Learning
+                        techniques in real-world projects, encompassing
+                        Regression, Computer Vision, Deep Neural Networks,
+                        Convolutional Neural Networks, Natural Language
+                        Processing, and Time Series Forecasting.
+                      </p>
+                    </CardContent>
+                  </div>
+                </div>
+              </SpotLightItem>
+            </Spotlight>
           </div>
         </div>
-        {/* <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex"></div> */}
-        {/* <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-          <Image
-            className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
-        </div> */}
       </main>
 
       <footer className="mt-32">
@@ -522,12 +524,7 @@ export default function Home() {
           </div>
         </div>
         <div className="w-full h-full px-7 pb-12">
-          <Image
-            className="object-cover"
-            src={Flower2}
-            alt="flower2"
-            // layout="responsive"
-          />
+          <Image className="object-cover" src={Flower2} alt="flower2" />
         </div>
         {/* <div className="relative w-full h-[50vw] overflow-hidden">
           <Image
